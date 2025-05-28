@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Masakan Betawi Bang Dodi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Header -->
+    <header class="bg-warning py-3 text-center">
+        <h1 class="fw-bold">Masakan Betawi Bang Dodi</h1>
+        <p class="mb-0">Selamat Datang di Resto Kami</p>
+    </header>
+
+    <!-- Menu Daftar / Login -->
+    <section class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Daftar / Masuk</h3>
+                        <form action="login.php" method="POST">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Nama Pengguna</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Kata Sandi</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-warning w-100">Masuk</button>
+                        </form>
+                        <p class="text-center mt-3">Belum punya akun? <a href="register.php">Daftar di sini</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Pemesanan (hanya tampil setelah login) -->
+    <section class="container mt-5">
+        <h2 class="text-center mb-4">Menu Pemesanan</h2>
+        <table class="table table-bordered">
+            <thead class="table-warning">
+                <tr>
+                    <th>Menu</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nasi Uduk</td>
+                    <td>Rp 25.000</td>
+                    <td><input type="number" value="1" min="1" class="form-control"></td>
+                    <td><button class="btn btn-success">Pesan</button></td>
+                </tr>
+                <tr>
+                    <td>Soto Betawi</td>
+                    <td>Rp 30.000</td>
+                    <td><input type="number" value="1" min="1" class="form-control"></td>
+                    <td><button class="btn btn-success">Pesan</button></td>
+                </tr>
+                <tr>
+                    <td>Kerak Telor</td>
+                    <td>Rp 20.000</td>
+                    <td><input type="number" value="1" min="1" class="form-control"></td>
+                    <td><button class="btn btn-success">Pesan</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        &copy; 2025 Masakan Betawi Bang Dodi
+    </footer>
+</body>
+</html>
